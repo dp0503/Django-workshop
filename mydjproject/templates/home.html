@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Transition Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            perspective: 1000px; /* Adding perspective for the 3D effect */
+        }
+        .container {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d; /* Enables 3D transformations */
+            transition: transform 0.5s; /* Smooth transition */
+        }
+        .container:hover {
+            transform: rotateY(180deg); /* Rotate on hover */
+        }
+        .face {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            backface-visibility: hidden; /* Hides the back face */
+            border-radius: 10px;
+        }
+        .front {
+            background-color: #ff6347; /* Tomato color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .back {
+            background-color: #4682b4; /* Steel blue color */
+            transform: rotateY(180deg); /* Position the back face */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="face front">Welcome to My Website!</div>
+        <div class="face back">Thank you for visiting!</div>
+    </div>
+
+</body>
+</html>
