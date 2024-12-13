@@ -5,5 +5,7 @@ urlpatterns=[
     path("home",views.homepageview),
     path("form",views.formpageview),
     path('process',views.formpageprocess),
+    path("student",views.addstudent),
+    path("display-student",views.displaystudent),
 
 ]
