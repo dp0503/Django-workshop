@@ -1,2 +1,2 @@
 # Django-workshop
-Basic code of Django in html 
+Basic code of Django & workshop project 
